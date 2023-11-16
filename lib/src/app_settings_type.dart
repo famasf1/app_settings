@@ -28,6 +28,11 @@ enum AppSettingsType {
   /// Only supported on Android.
   batteryOptimization,
 
+  /// Open Biometrics settings (Currently work only for device without fingerprint.)
+  /// 
+  /// Only supported on Android. Required API Level 30.
+  biometrics,
+
   /// Open the Bluetooth settings.
   ///
   /// Only supported on Android.
@@ -53,20 +58,15 @@ enum AppSettingsType {
   /// Only supported on Android.
   device,
 
-  /// Open the general device settings (The first page when user open Settings.)
-  /// 
-  /// Only supported on Android.
-  generalSettings,
-
-  /// Open Biometrics settings (Currently work only for device without fingerprint.)
-  /// 
-  /// Only supported on Android. Required API Level 30.
-  biometrics,
-  
   /// Open the display settings.
   ///
   /// Only supported on Android.
   display,
+
+  /// Open the general device settings (The first page when user open Settings.)
+  /// 
+  /// Only supported on Android.
+  generalSettings,
 
   /// Open the Hotspot settings.
   ///
