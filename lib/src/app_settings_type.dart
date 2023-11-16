@@ -57,6 +57,11 @@ enum AppSettingsType {
   /// 
   /// Only supported on Android.
   generalSettings,
+
+  /// Open Biometrics settings (Currently work only for device without fingerprint.)
+  /// 
+  /// Only supported on Android.
+  biometrics,
   
   /// Open the display settings.
   ///

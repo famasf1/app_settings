@@ -84,6 +84,7 @@ class AppSettingsPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
       "generalSettings" -> openSettings(Settings.ACTION_SETTINGS, result, asAnotherTask)
       "display" -> openSettings(Settings.ACTION_DISPLAY_SETTINGS, result, asAnotherTask)
       "hotspot" -> openHotspotSettings(result, asAnotherTask)
+      "biometrics" -> openSettings(Settings.ACTION_BIOMETRIC_ENROLL, result, asAnotherTask)
       "internalStorage" -> openSettings(
         Settings.ACTION_INTERNAL_STORAGE_SETTINGS,
         result,
