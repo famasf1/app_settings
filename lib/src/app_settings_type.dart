@@ -60,7 +60,7 @@ enum AppSettingsType {
 
   /// Open Biometrics settings (Currently work only for device without fingerprint.)
   /// 
-  /// Only supported on Android.
+  /// Only supported on Android. Required API Level 30.
   biometrics,
   
   /// Open the display settings.
