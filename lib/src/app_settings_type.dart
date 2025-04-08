@@ -64,7 +64,7 @@ enum AppSettingsType {
   display,
 
   /// Open the general device settings (The first page when user open Settings.)
-  /// 
+  ///
   /// Only supported on Android.
   generalSettings,
 
@@ -87,6 +87,11 @@ enum AppSettingsType {
   ///
   /// Only supported on Android.
   lockAndPassword,
+
+  /// Open the request app install settings.
+  ///
+  /// Only supported on Android.
+  manageUnknownAppSources,
 
   /// Open the NFC settings.
   ///
@@ -130,4 +135,8 @@ enum AppSettingsType {
   ///
   /// Only supported on Android.
   wireless,
+
+  /// Only supported on MacOS
+  camera,
+
 }

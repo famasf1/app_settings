@@ -1,7 +1,8 @@
-import Flutter
+@preconcurrency import Flutter
 import UIKit
 import StoreKit
 
+@MainActor
 public class AppSettingsPlugin: NSObject, FlutterPlugin, UIWindowSceneDelegate {
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "com.spencerccf.app_settings/methods", binaryMessenger: registrar.messenger())
