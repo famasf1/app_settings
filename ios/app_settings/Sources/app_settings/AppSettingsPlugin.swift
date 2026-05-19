@@ -3,7 +3,7 @@ import UIKit
 import StoreKit
 
 @MainActor
-public class AppSettingsPlugin: NSObject, FlutterPlugin, UIWindowSceneDelegate {
+public class AppSettingsPlugin: NSObject, @preconcurrency FlutterPlugin, UIWindowSceneDelegate {
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "com.spencerccf.app_settings/methods", binaryMessenger: registrar.messenger())
         let instance = AppSettingsPlugin()
@@ -30,6 +30,8 @@ public class AppSettingsPlugin: NSObject, FlutterPlugin, UIWindowSceneDelegate {
         case "notification":
             if #available(iOS 16.0, *) {
                 openSettings(settingsUrl: UIApplication.openNotificationSettingsURLString)
+            } else if #available(iOS 15.4, *) {
+                openSettings(settingsUrl: UIApplicationOpenNotificationSettingsURLString)
             } else {
                 openSettings(settingsUrl: UIApplication.openSettingsURLString)
             }
